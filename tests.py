@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.test import Client
-from unittest import IsolatedAsyncioTestCase
+# from unittest import IsolatedAsyncioTestCase
 
 
 

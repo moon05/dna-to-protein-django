@@ -27,7 +27,7 @@ async def makeSearch(dna_string):
 	return search(dna_string)
 
 
-async def search(request):
+async def findString(request):
 	par = request.GET.get('q')
 	if par is None:
 		print (os.getcwd())
