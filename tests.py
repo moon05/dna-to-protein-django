@@ -13,12 +13,12 @@ class SimpleTestSuite(TestCase):
 		self.assertEqual(response.status_code, 200)
 
 	def test_dna_search_url(self):
-		response = self.client.get('/dnatoprotein/search')
+		response = self.client.get('/dnatoprotein/find')
 		self.assertEqual(response.status_code, 200)
 		self.assertContains(response, "No Input")
 
 	def test_dna_search_with_no_query(self):
-		response = self.client.get('/dnatoprotein/search?q')
+		response = self.client.get('/dnatoprotein/find?q')
 		self.assertEqual(response.status_code, 200)
 		self.assertContains(response, "Empty String/Invalid Input")
 
