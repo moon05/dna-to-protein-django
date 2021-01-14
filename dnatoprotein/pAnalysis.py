@@ -87,7 +87,7 @@ def search(dna_string):
 			print (records.id)
 			r = records.seq
 			print (type(r))
-			res = check_match(dna_string.upper(), r)
+			res = check_match(dna_string.upper().replace(" ",""), r)
 			if res != -1:
 				print ({"match_loc": res, "name": values["name"]})
 				return {"match_loc": res, "name": values["name"]}
