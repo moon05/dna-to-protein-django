@@ -27,12 +27,12 @@ async def makeSearch(dna_string):
 	return search(dna_string)
 
 
-async def relax(request):
+async def search(request):
 	par = request.GET.get('q')
 	if par is None:
 		print (os.getcwd())
 		return HttpResponse("No Input")
-	elif par is "":
+	elif par == "":
 		print (os.getcwd())
 		return HttpResponse("Empty String/Invalid Input")
 	else:
